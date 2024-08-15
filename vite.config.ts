@@ -2,7 +2,7 @@
 /// <reference types="vite/client" />
 
 import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'url'
+//import { fileURLToPath, URL } from 'url'
 import path from 'path'
 
 const projectName = 'oklch-converter'
@@ -26,7 +26,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'), // fileURLToPath(new URL('src/main.ts')),
+      entry: path.resolve(__dirname, 'src/index.ts'), // fileURLToPath(new URL('src/index.ts')),
       name: projectName,
       fileName: (format) => `${projectName}.${format}.js`,
     },
