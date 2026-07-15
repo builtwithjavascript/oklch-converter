@@ -1,6 +1,6 @@
 {
   "name": "@builtwithjavascript/oklch-converter",
-  "version": "0.9.5",
+  "version": "1.0.0",
   "description": "A minimal color converter Hex/RGB/HSL to Oklch",
   "author": "Damiano Fusco",
   "license": "MIT",
@@ -18,9 +18,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build-types": "tsc src/index.ts --esModuleInterop --declaration --emitDeclarationOnly --outDir dist",
+    "build-types": "tsc src/index.ts --ignoreConfig --esModuleInterop --declaration --emitDeclarationOnly --outDir dist",
     "build": "tsc --esModuleInterop && vite build && npm run build-types",
-    "pub": "npm publish --access public",
+    "pub": "npm run build; npm publish --access public --otp=",
     "test": "TESTING=true vitest run",
     "test-watch": "TESTING=true vitest watch",
     "pretty": "prettier -w \"./src/**/*.ts\"",
@@ -30,13 +30,13 @@
     "postversion": "git push"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/node": "^22.3.0",
-    "jsdom": "^24.1.1",
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.1",
-    "vitest": "^2.0.5"
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.1",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
   },
   "files": [
     "dist"
